@@ -156,7 +156,10 @@ class Score:
         score_Surface = self.img.get_rect(center = self.pos)
         screen.blit(self.img, score_Surface)
 
-class Explosion:
+class Explosion: 
+    """
+    ヒットしたら爆発するエフェクトの作成クラス
+    """
     def __init__(self,center:tuple[int,int]):
         original = pg.image.load("fig/explosion.gif").convert_alpha()
         flipped_h = pg.transform.flip(original, True, False)
